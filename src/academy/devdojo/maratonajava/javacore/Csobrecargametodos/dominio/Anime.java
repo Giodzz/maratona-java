@@ -6,6 +6,11 @@ public class Anime {
     private int episodios;
     private String genero;
 
+    // método construtor da classe (o compilador coloca por padrão): constroi o objeto
+    public Anime() {
+
+    }
+
     public void init(String nome, String tipo, int episodios) {
         this.nome = nome;
         this.tipo = tipo;
