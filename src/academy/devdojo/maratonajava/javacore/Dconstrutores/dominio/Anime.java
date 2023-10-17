@@ -5,17 +5,24 @@ public class Anime {
     private String tipo;
     private int episodios;
     private String genero;
+    private String estudio;
 
-    // método construtor da classe (o compilador coloca por padrão): constroi o objeto
+    // método construtor não tem retorno
     public Anime(String nome, String tipo, int episodios, String genero) {
+        this(); // chama outro construtor
         this.nome = nome;
         this.tipo = tipo;
         this.episodios = episodios;
         this.genero = genero;
     }
 
-    public Anime(){
+    public Anime(String nome, String tipo, int episodios, String genero, String estudio) {
+        this(nome, tipo, episodios, genero); // recisa ser a primeira linha do construtor
+        this.estudio = estudio;
+    }
 
+    public Anime(){
+        System.out.println("Dentro do construtor sem argumentos");
     }
 
     public void imprime() {
@@ -23,5 +30,6 @@ public class Anime {
         System.out.println(this.tipo);
         System.out.println(this.episodios);
         System.out.println(this.genero);
+        System.out.println(this.estudio);
     }
 }
